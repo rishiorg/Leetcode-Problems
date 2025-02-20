@@ -5,7 +5,10 @@ class Solution(object):
         :rtype: int
         """
         n = len(nums)
+        maxi = max(nums)
+        mini = min(nums)
         if n<3:
             return -1
-        nums.sort()
-        return nums[1]
+        nums.remove(maxi)
+        nums.remove(mini)
+        return nums[0]
