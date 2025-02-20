@@ -11,4 +11,7 @@ class Solution(object):
             return -1
         nums.remove(maxi)
         nums.remove(mini)
+        # for i in nums:
+        #     if i != maxi and nums != mini:
+        #         return i
         return nums[0]
