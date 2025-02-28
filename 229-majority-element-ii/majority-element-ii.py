@@ -57,7 +57,7 @@ class Solution(object):
             ls.append(ele1)
         if count2 >= mini:
             ls.append(ele2)
-        ls.sort()
+        # ls.sort()
         return ls
 
         
