@@ -19,21 +19,28 @@ class Solution(object):
         # return element
 
         # specific row
-        # ans = 1
-        # print(ans, end=" ") # printing 1st element
+        def generateRow(n):
+            ans = 1
+            answer = [] # printing 1st element
+            answer.append(1)
 
-        # #Printing the rest of the part:
-        # for i in range(1, n):
-        #     ans = ans * (n - i)
-        #     ans = ans // i
-        #     print(ans, end=" ")
-        # print()
+            #Printing the rest of the part:
+            for i in range(1, n):
+                ans = ans * (n - i)
+                ans = ans // i
+                answer.append(ans)
+            return answer
 
         #brute
+        # ans = []
+        # for i in range(numRows):
+        #     tempList = []
+        #     for j in range(i+1):
+        #         tempList.append(nCr(i,j))
+        #     ans.append(tempList)
+        # return  ans
         ans = []
-        for i in range(numRows):
-            tempList = []
-            for j in range(i+1):
-                tempList.append(nCr(i,j))
-            ans.append(tempList)
-        return  ans
+        for i in range(1,numRows+1):
+            ans.append(generateRow(i))
+        return ans
+
